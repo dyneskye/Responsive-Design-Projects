@@ -1,0 +1,312 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: monospace, sans-serif;
+    background-image: url("https://i.imgur.com/oqST5Xz.png");
+} 
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.6em;
+}
+
+#main {
+    max-width: 1000px;
+    width: auto;
+    max-height: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: lightgrey;
+}
+
+#title {
+    text-align: center;
+    max-height: 175px;
+    padding-top: 30px;
+}
+
+#title hr {
+    margin-top: 20px;
+}
+
+#img-div {
+    margin: 10px 10px 0 10px;
+    text-align: center;
+}
+
+#img-div img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    max-width: 100%;
+    width: auto;
+}
+
+#img-div figcaption {
+    margin: 10px 0px 20px 0px;
+}
+
+#tribute-info {
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+#tribute-info h3 {
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 30px;
+    padding-bottom: 5px;
+}
+
+#bio {
+    display: grid;
+    grid-template-columns: 275px 0.2fr 0.4fr 0.4fr;
+    grid-template-rows: 35px 35px 40px 25px 70px;
+    margin: 0 0px;
+    height: 334px;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: black;
+}
+
+#bio span {
+    text-align: left;
+    white-space: pre-line;
+    font-size: 1.6em;
+}
+
+#heighth {
+    grid-area: 2/2;
+}
+
+#heightc {
+    grid-area: 2/3;
+}
+
+
+#foodh {
+    grid-area: 3/2;
+}
+
+#foodc {
+    grid-area: 3/3;
+}
+
+#bornh {
+    grid-area: 4/2;
+}
+
+#bornc {
+    grid-area: 4/3;
+}
+
+#deathh {
+    grid-area: 6/2;
+}
+
+#deathc {
+    grid-area: 6/3;
+}
+
+#disciplineh {
+    grid-area: 7/2;
+}
+
+#disciplinec {
+    grid-area: 7/3;
+}
+
+#quote1 {
+    grid-area: 2/4;
+    padding-right: 50px;
+}
+
+#portrait-img {
+    width: 256px;
+    height: 334px;
+}
+
+#sigh {
+    position: relative;
+    grid-area: 7/4;
+    bottom: 30px;
+    left: 70px;
+}
+
+#sig {
+    width: 200px;
+    grid-area: 7/4;
+    margin-left: 10px;
+}
+
+#lower-section {
+    display: grid;
+    grid-template-columns: 700px 300px;
+    margin: 0 20px;
+}
+
+#lower-section h2 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+#timeline {
+    text-align: left;
+    grid-column-start: 1;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+#timeline a {
+    color: gray;
+}
+
+#gallery {
+    width: 200px;
+    margin-top: 25px;
+    margin-left: 80px;
+    border-left: 1px solid black;
+}
+
+#gallery img {
+    width: 125px;
+    padding-bottom: 5px;
+}
+
+@media (max-width: 950px) {
+    #lower-section {
+        display: inline-block;
+    }
+
+    #gallery {
+        margin: 0 auto;
+        margin-top: 50px;
+        padding-top: 10px;
+        border-left: 0px;
+        border-top: 1px solid black;
+        width: 800px;
+    }
+}
+
+@media (max-width: 840px) {
+    #bio {
+        font-size: 0.9em;
+        height: 410px;
+        grid-template-columns: 275px 85px 175px 0.6fr;
+        grid-template-rows: 35px 50px 50px 50px 75px 80px;
+    }
+
+    #deathh, #deathc {
+        position: relative;
+        bottom: 30px;
+    }
+
+    #quote1 {
+        margin-left: 30px;
+        width: 175px;
+    }
+
+    #disciplineh, #disciplinec {
+        grid-area: 5/4;
+        margin-left: 40px;
+    }
+
+    #disciplinec {
+        margin-top: 30px;
+        width: 40px;
+    }
+
+    #sigh, #sig  {
+        grid-area: 7/1;
+        margin-top: 25px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 730px) {
+    #bio {
+        grid-template-columns: 145px 95px 200px;
+        grid-template-rows: 55px 25px 40px 25px 60px 25px 100px;
+        height: 310px;
+    }
+    
+    #disciplineh, #disciplinec {
+        margin: 0;
+    }
+
+    #disciplineh {
+        grid-area: 7/2;
+    }
+
+    #disciplinec {
+        grid-area: 7/3;
+    }
+
+    #sigh, #sig {
+        margin: 0;
+    }
+
+    #sig {
+        position: relative;
+        top: 50px;
+        left: 5px;
+        width: 125px;
+        grid-area: 5/1;
+    }
+
+    #sigh {
+        position: relative;
+        top: -60px;
+        left: 25px;
+        right: 0px;
+    }
+
+    #portrait-img {
+        width: 127px;
+        height: 166px;            
+    }
+
+    #quote1 {
+        position: relative;
+        top: 10px;
+        right: 45px;
+        grid-area: 1/2;
+        width: 400px;
+    }
+}
+
+@media (max-width: 700px) {
+    #gallery {
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 5px;
+        width: 400px;
+    }
+}
+
+
+
+
