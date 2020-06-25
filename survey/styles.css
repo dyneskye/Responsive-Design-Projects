@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: url("images/beige-tiles.png");
+}
+
+#title-box {
+    margin: 10px auto;
+    text-align: center;
+}
+
+#container {
+    text-align: center;
+    background-color: linen;
+    padding: 15px 20px 0 20px;
+    margin: 50px auto;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+
+
+#container {
+    transition: ease-in;
+    transition-duration: 1s;
+    transition-property: box-shadow;
+    box-shadow: -5px 5px 10px black;
+}
+
+form {
+    opacity: 100%;
+    font-size: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: left;
+}
+
+
+label {
+    font-weight: 500;
+}
+
+input {
+    font-size: 2rem;
+    padding-left: 8px;
+    margin: 5px 0 25px 0px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    transition: ease-in;
+    transition-duration: 200ms;
+    box-shadow: 0px 0px 10px orangered;
+}
+
+input[type="radio"] {
+    width: 20px;
+    margin: 5px 0px;
+}
+
+input[type="radio"]:hover, input[type="radio"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 transparent;
+}
+
+select {
+    margin-top: 10px;
+    padding-left: 5px;
+    font-size: 20px;
+    width: 100%;
+    height: 40px;
+}
+
+textarea {
+    font-size: 3rem;
+    padding: 10px 0 0 10px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    resize: none;
+    height: 150px;
+    width: 100%;
+}
+
+#radioboxes {
+    margin: 20px auto 0 auto;
+    display: inline-block;
+    width: 100%;
+}
+
+#radios {
+    width: 40px;
+    float: left;
+}
+
+#labels {
+    float: left;
+    width: 50px;
+    height: 128px;
+}
+
+label[for="yes"] {
+    position: relative;
+    top: 14px;
+}
+
+label[for="no"] {
+    position: relative;
+    top: 47px;
+}
+
+#yesAns, #noAns {
+    visibility: hidden;
+}
+
+#yes:checked + #yesAns {
+    visibility: visible;
+}
+
+#no:checked + #noAns {
+    visibility: visible;
+}
+
+#yesAns {
+    position: relative;
+    display: block;
+    top: -15px;
+    left: 140px;
+    width: 360px;
+    height: 0px;
+}
+
+#noAns {
+    position: relative;
+    display: block;
+    bottom: 77px;
+    left: 120px;
+    width: 410px;
+    height: 0px;
+}
+
+#checkbox-title {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+#checkboxes {
+    height: 100px;
+    width: 600px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+
+#checkboxes label {
+    position: relative;
+    left: 20px;
+    bottom: 25px;
+    margin-right: 25px;
+}
+
+#checkboxes #car-label {
+    left: 17px;
+}
+
+#checkboxes #forest-label {
+    left: 9px;
+}
+
+
+#checkboxes input {
+    position: relative;
+    top: 30px;
+    right: 285px;
+    width: 40px;
+    margin-left: 20px;
+}
+
+
+#checkboxes input:focus {
+    outline: none;
+    box-shadow: 0 0 0 transparent;
+}
+
+#title {
+    font-size: 5rem;
+    margin-bottom: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#description {
+    font-size: 1.6rem;
+}
+
+
+#otherLabel {
+    position: relative;
+    top: 10px;
+    display: none;
+}
+
+#submit {
+    background-color: orange;
+    color: white;
+    font-size: 1.2em;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 5px;
+    height: 60px;
+    border: 1px solid gray;
+}
+
+#submit:active {
+    box-shadow: 5px 0px 20px orangered inset;
+    outline: none;
+}
+
+footer {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+    #container {
+        margin-bottom: 15px;
+        padding-bottom: 0px;
+    }
+}

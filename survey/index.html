@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Survey</title>
+
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <div id="title-box">
+        <h1 id="title">Dream Survey</h1>
+        <p id="description"><em >“You are never too old to set another goal or to dream a new dream.”
+            – <strong>C.S. Lewis</strong></em></p>
+    </div>
+
+    <div id="container">
+        <form id="survey-form" action="POST">
+            <label id="name-label" for="name">
+                Name: <input id="name" type="text" name="name" placeholder="Full name" required>
+            </label>
+            <label id="email-label" for="email">
+                Email <input id="email" type="email" name="email" placeholder="example@example.com" required>
+            </label>
+            <label id="number-label" for="number">
+                Age <small>(optional)</small><input id="number" type="number" name="age" placeholder="25" min="1" max="100">
+            </label>
+            <label for="role">
+                <p>What best describes your current role?</p>
+                <select name="role" id="dropdown" onchange="displayOther(this)">
+                    <option value="full-time-student">Full Time Student</option>
+                    <option value="part-time-student">Part time Student</option>
+                    <option value="full-time-job">Full Time Job</option>
+                    <option value="part-time-job">Part Time Job</option>
+                    <option value="undisclosed">Prefer to not say</option>
+                    <option id="other-button" value="other">Other</option>
+                </select>
+                <label id="otherLabel" for="other">
+                    <p>Specify other role</p>
+                    <input id="other" type="text" name="other" placeholder="Other">
+                </label>
+            </label>
+            <div id="radioboxes">
+                <p>Do you have any dreams? Long term goals?</p>
+
+                <div id="radios">
+                    <input id="yes" type="radio" name="yesorno" value="yes" required><span id="yesAns">Excellent, continue to the section below!</span>
+                    <input id="no" type="radio" name="yesorno" value="no"><span id="noAns">What are you waiting for? Start planning now!</span>
+                </div>
+                <div id="labels">
+                    <label for="yes">Yes</label>
+                    <label for="no">No</label>
+                </div>
+
+            </div>
+            <div id="checkboxes">
+                <h2 id="checkbox-title">Where are your favourite places to sleep?</h2>
+                <label id="bed-label" for="bed">Bed</label>
+                <label id="sofa-label" for="sofa">Sofa</label>
+                <label id="car-label" for="car">Car</label>
+                <label id="forest-label" for="forest">Forest</label>
+                <input id="bed" type="checkbox" name="bed" git value="bed">
+                <input id="sofa" type="checkbox" name="sofa" value="sofa">
+                <input id="car" type="checkbox" name="car" value="car">
+                <input id="forest" type="checkbox" name="forest" value="forest">
+            </div>
+            
+            <br>
+                <label for="ten-years">
+                    Where do you want to be in 10 years? 
+                    <textarea id="ten-years" name="ten-years" placeholder="" required></textarea>
+                </label>
+                
+                <label for="five-years">
+                    Where do you want to be in 5 years? 
+                    <textarea id="five-years" name="five-years" placeholder="" required></textarea>
+                </label>
+
+                <label for="one-year">
+                    Where do you want to be in 1 year? 
+                    <textarea id="one-years" name="one-years" placeholder="" required></textarea>
+                </label>
+                <button id="submit" name="submit">Submit</button>
+        </form>  
+        
+        
+    </div>
+
+    
+    
+    <footer>
+        <p>© Sky 2020</p>
+    </footer>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <script defer type="text/javascript">
+        function displayOther(opt) {
+            if (opt.value == "other") {
+                document.getElementById('otherLabel').style.display = "block";
+            }
+        }
+
+    </script>
+</body>
+</html>
