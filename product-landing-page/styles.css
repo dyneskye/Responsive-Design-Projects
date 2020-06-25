@@ -12,7 +12,7 @@ body {
     background-color: #EEEEEE;
 }
 
-#header, #container, #footer {
+#header, #main, #footer {
 
 }
 
@@ -20,10 +20,10 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 0px auto;
-    max-width: 2400px;
-    height: 150px;
-    padding: 0px 40px 0 40px;
-    font-size: 2.8em;
+    max-width: 1200px;
+    height: 120px;
+    padding: 0px 0px 0 40px;
+    font-size: 2em;
     border: 1px solid black;
     background-color: #2E3A47;
 }
@@ -32,9 +32,19 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-left: 200px;
-    max-width: 1000px;
-    width: 100%;
+    max-width: 500px;
+    margin-left: 60px;
+}
+
+li {
+    list-style: none;
+    flex-basis: 400px;
+    text-align: center;
+    padding-top: 45px;
+    width: 200px;
+    height: 120px;
+    border-right: 1px solid black;
+
 }
 
 .nav-link {
@@ -42,33 +52,76 @@ body {
     flex-basis: 400px;
     text-align: center;
     color: #FFFFFF;
-    padding-top:30px;
-    margin:  0px;
-    min-width: 300px;
-    height: 100px;
-    border-right: 1px solid black;
+    width: 200px;
 }
 
 .nav-link:last-of-type {
     border-right: 0px;
 }
 
-.nav-link:hover {
+li:hover {
     transition: ease-in;
     transition-duration: 100ms;
     background-color: orangered;
 }
 
 #header-img {
-    max-width: 680px;
-    margin: 20px 40px 1 0px 0px;
+    max-width: 480px;
+    width: auto;
+    height: 100px;
+    margin: 10px 40px 0px 0px;
 }
 
 #main {
     background-color: #f5f5f5;
     margin: 0 auto;
-    max-width: 2400px;
+    max-width: 1200px;
     height: 100vh;
+}
+
+#subscription {
+    display: grid;
+    background-color: gray;
+    max-height: 400px;
+    grid-template-columns: 0.1fr 0.8fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#email-form {
+    grid-area: 2/3;
+}
+
+button {
+    position: relative;
+    top: 3px;
+    right: 1px;
+    font-size: 3em;
+    height: 80px;
+    width: 100px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-width: 0px;
+}
+
+input {
+    font-size: 2em;
+    height: 80px;
+    width: 400px;
+    padding-left: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-width: 0px;
+}
+
+input:focus, button:focus {
+    outline: none;
+}
+
+#header1 {
+    grid-area: 2/2;
+    color: #F5F5F5;
+    font-size: 5em;
+    white-space: pre-line;
 }
 
 #popup {
