@@ -8,21 +8,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
     <header id="header">
         <img id="header-img" src="images/1.1.png" alt="Product Logo">
         <nav id="nav-bar">
-            <li><a class="nav-link" href="#how">How it works</a></li>
-            <li><a class="nav-link" href="#ingredients">Ingredients</a></li>
-            <li><a class="nav-link" href="#">Prices</a></li>
+            <a class="nav-link" href="#how"><li>How it works</li></a>
+            <a class="nav-link" href="#ingredients"><li>Ingredients</li></a>
+            <a class="nav-link" href="#price"><li>Prices</li></a>
         </nav>
     </header>
 
     <div id="main">
         <div id="subscription">
-            <h2 id="header1">Start Boosting Right Now 
-                with <span class="colored-text">10 FREE Tips</span> from Leading Scientists</h2>
-            <form id="email-form">
+            <h2 id="sub-header">Start Boosting Right Now with <span class="colored-text">10 FREE Tips</span> from Leading Scientists</h2>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
                 <input id="email" type="email" name="email" placeholder="example@example.com">
                 <input id="submit" type="submit" name="submit" value="Send"></input>
                 <span id="sub-thanks"></span>
@@ -42,7 +40,7 @@
                 <p id="how-desc-2-p1">Memory, attention, focus, memory ... did I say memory? Joking. Oh and also memory. Studying never got easier, how many times have you flunked out reading a page? how many times has a teacher managed to make a seamingly facinating subject, like watching paint dry? Enough. I've had enough. You've had enough. <em>Scientists have had enough.</em></p>
                 <p id="how-desc-2-p2">Brain Boost works by stimulating several sectors of the brain, we can't tell you which, but the scientists can... what was I talking about? oh yeah! memory ... and scientists. How else are you going to work long hours in the factories?</p>
                 <h4>Statistics</h4>
-                <p id="how-desc-2-p3">Don't believe us? Check out these <a href="images/boost-graph.png">statistics</href></a></p>
+                <p id="how-desc-2-p3">Don't believe us? Check out these <a id="graph-link" href="images/boost-graph.png" alt="Image of brain cell Increase per brain boost graph">statistics</a><span id="graph-tooltip"><img src="/images/boost-graph.png" alt="">Boost Graph</span></a></p>
             </div>
         </div>
         <div id="ingredients">
@@ -82,8 +80,8 @@
                 </tbody>
             </table>
         </div>
-        <div id="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/o09Rp1mNOXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id="vid">
+            <iframe id="video" width="460" height="315" src="https://www.youtube.com/embed/o09Rp1mNOXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div id="price">
 
@@ -128,7 +126,6 @@
                 </div>
             </div>
         </div>
-
         <footer id="footer">© Sky</footer>
     </div>
 
