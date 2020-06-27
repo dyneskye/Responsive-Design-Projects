@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Landing Page</title>
-
+    <script defer src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,33 +12,129 @@
     <header id="header">
         <img id="header-img" src="images/1.1.png" alt="Product Logo">
         <nav id="nav-bar">
-            <li><a class="nav-link" href="#">How it works</a></li>
-            <li><a class="nav-link" href="#">Ingredients</a></li>
+            <li><a class="nav-link" href="#how">How it works</a></li>
+            <li><a class="nav-link" href="#ingredients">Ingredients</a></li>
             <li><a class="nav-link" href="#">Prices</a></li>
         </nav>
     </header>
 
     <div id="main">
         <div id="subscription">
-            <h2 id="header1">Start Boosting Now with
-                 10 FREE Tips from Leading Scientists</h2>
+            <h2 id="header1">Start Boosting Right Now 
+                with <span class="colored-text">10 FREE Tips</span> from Leading Scientists</h2>
             <form id="email-form">
                 <input id="email" type="email" name="email" placeholder="example@example.com">
-                <button id="submit" name="submit">Zap!</button>
+                <input id="submit" type="submit" name="submit" value="Send"></input>
+                <span id="sub-thanks"></span>
             </form>
         </div>
-        <!-- iframe or video tag? -->
-        <video id="video" src=""></video>
+
+        <div id="how">
+            <div id="how-desc-1">
+                <img id="how-img-1" src="images/2345206.jpg" width="200">
+                <h3>How it works</h3>
+                <p id="how-desc-2-p1">Brain Boost simply just works, it's magic. The ingredients you will find below make absolutely no sense at all and may as well be from planet zarbon. But who cares? scientists said <em>it works</em>.</p>
+                <p id="how-desc-2-p2">It isn't just magic though, it's science too. Brain Boost increases your brains neurogenesis, which means increasing the speed at which your brain heals. Alcohol? Brain Damage? <em>A thing of the past.</em> Drink as much as you want!</p>
+            </div>
+            <div id="how-desc-2">
+                <img id="how-img-2" src="images/stackedbooks.jpeg">
+                <h3>Boost Preformance</h3>
+                <p id="how-desc-2-p1">Memory, attention, focus, memory ... did I say memory? Joking. Oh and also memory. Studying never got easier, how many times have you flunked out reading a page? how many times has a teacher managed to make a seamingly facinating subject, like watching paint dry? Enough. I've had enough. You've had enough. <em>Scientists have had enough.</em></p>
+                <p id="how-desc-2-p2">Brain Boost works by stimulating several sectors of the brain, we can't tell you which, but the scientists can... what was I talking about? oh yeah! memory ... and scientists. How else are you going to work long hours in the factories?</p>
+                <h4>Statistics</h4>
+                <p id="how-desc-2-p3">Don't believe us? Check out these <a href="images/boost-graph.png">statistics</href></a></p>
+            </div>
+        </div>
+        <div id="ingredients">
+            <h3>Ingredients</h3>
+            <table id="ingredient-table">
+                <thead>
+                    <tr>
+                        <th>Ingredient</th>
+                        <th>RDA%</th>
+                        <th>Boost Power</th>
+                    </tr>
+                </thead>
+                <tbody> 
+                    <tr>
+                        <td>Vitamin B50</td>
+                        <td>1000%</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Helium</td>
+                        <td>500%</td>
+                        <td><sup>50</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Granite *</td>
+                        <td>10000%</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>Ham</td>
+                        <td>3%</td>
+                        <td>4</td>
+                    </tr>
+                    <tr id="star">
+                        <td>* This is definitely not a real graph</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/o09Rp1mNOXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div id="price">
+
+            <div id="price-container">
+                <div class="price-box">
+                    <h4>3 Month Supply</h4>
+                    <ul>
+                        <li>3 Empty Bottles</li>
+                        <li>1 hugs</li>
+                        <li>Pen with no ink</li>
+                        <li>3 Bottles of 120 Pillz</li>
+                    </ul>
+                    <span class="end-line">All Sales 20% to Charity</span>
+                    <button class="buy">Buy Now</button>
+
+                </div>
+                <img class="fwd-img" src="images/fast-forward.png" alt="">
+                <div class="price-box">
+                    <h4>6 Month Supply</h4>
+                    <ul>
+                        <li>6 Empty Bottles</li>
+                        <li>3.14 hugs</li>
+                        <li>Pen half full</li>
+                        <li>3 Bottles of 120 Pillz</li>
+                    </ul>
+                    <span class="end-line">All Sales 20% to Charity</span>
+                    <button class="buy">Buy Now</button>
+
+                </div>
+                <img class="fwd-img" src="images/fast-forward.png" alt="">
+                <div class="price-box">
+                    <h4>12 Month Supply</h4>
+                    <ul>
+                        <li>12.5 Empty bottles</li>
+                        <li>6 hugs</li>
+                        <li>Pen is Full</li>
+                        <li>3 Bottles of 120 Pillz</li>
+                    </ul>
+                    <span class="end-line">All Sales 20% to Charity</span>
+                    <button class="buy">Buy Now</button>
+
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">© Sky</footer>
     </div>
 
-    <div id="popup">
-        <form id="form">
-            <input id="email" type="email" name="email" placeholder="example@example.com">
-            <button id="submit" name="submit"></button>
-        </form>
-    </div>
 
-    <footer id="footer"></footer>
+    
+
 
 </body>
 </html>
