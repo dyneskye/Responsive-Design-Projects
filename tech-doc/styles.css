@@ -9,27 +9,44 @@ html {
 }
 
 body {
-    background: hsl(150, 70%, 80%);
+    background: #fdf5e8;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 html, body {
     height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
 h2 {
-    margin: 10px 0 20px 0;
-    font-size: 2.5rem;
+    margin: 20px 0;
+    font-size: 2.7rem;
 }
 
+p, code {
+    padding-left: 20px;
+}
+
+p, li {
+    font-size: 1.6rem;
+}
+
+li {
+    margin: 10px 0;
+}
+
+#container {
+    display: flex;
+}
 
 #navbar {
-    width: 350px;
+    position: fixed;
+    width: 315px;
     height: 100%;
     padding: 0 0px;
-    border: 1px solid black;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 1px 0 0;
 }
 
 #navbar header {
@@ -40,34 +57,33 @@ h2 {
     font-weight: 600;
 }
 
-#navbar li {
-    list-style: none;
-    margin: 0 auto;
-    width: 80%;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px 0 0 0;
-    padding: 30px 0 30px  0;
-}
 
 .nav-link {
+    display: block;
     position: relative;
+    padding: 30px 0 30px  0;
     text-align: center;
     font-size: 1.6rem;
     text-decoration: none;
+    /*
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    */
     color: hsl(105, 4%, 37%);
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    width: 50%;
-    left: 25%;
-    bottom: -20px;
-    border-bottom: 1px solid #3483DF;
+    width: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0px;
+    border-bottom: 1px solid red;
 }
 
-#navbar li:hover {
+.nav-link:hover {
     transition: ease-in;
     transition-duration: 200ms;
     background-color: orange;
@@ -76,20 +92,20 @@ h2 {
 #main-doc code {
     display: block;
     font-size: 1.4rem;
-    width: 500px;
-    background-color: lightgray;
+    background-color: #1D1E22;
+    color: #6A7D64;
     border: 1px solid gray;
-    /* margin not working on code blocks */
-    padding: 15px 10px;
+    padding: 15px 15px;
     margin: 10px 0;
+    margin-right: 10px;
 }
 
-p, li {
-    font-size: 1.6rem;
+#main-doc ul {
+    margin: 10px 0 10px 60px;
 }
 
-li {
-    margin: 10px 0 0 20px;
+#main-doc ul>ul {
+    margin-left: 40px;
 }
 
 #container {
@@ -98,11 +114,50 @@ li {
 }
 
 #main-doc {
-    margin-left: 40px;
+    margin-left: 360px;
     padding-top: 20px;
     padding-right: 30px;
     width: 100%;
-    height: 100%;
-    overflow-y: scroll;
+}
+
+
+@media (max-width: 800px) {
+
+    #container {
+        flex-wrap: wrap;
+    }
+
+    #navbar {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        border-width: 0 0 3px 0;
+        height: 275px;
+    }
+
+    #navbar header {
+        margin-bottom: 0;
+    }
+
+    #links {
+        overflow-y: scroll;
+        height: 168px;
+    }
+
+    .nav-link {
+        padding: 10px 0px;
+        border: 1px solid black;
+        border-width: 1px 0 0 0;
+    }
+
+    .nav-link::after {
+        width: 0px;
+    }
+
+    #main-doc {
+        margin: 0px 20px 80px 20px;
+        padding: 0px;
+    }
+
 }
 
