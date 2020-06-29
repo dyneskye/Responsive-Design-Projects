@@ -62,35 +62,54 @@ a {
     text-align: center;
     height: 100vh;
     padding-top: 50px;
-    background: #eeeeee;
+    background: #131417;
 }
 
-#inner-welcome {
+#welcome-header {
     height: 300px;
     width: 300px;
     margin: 0px auto;
-    padding-top: 110px;
-    background: linear-gradient(#eeeeee, white);
+    padding-top: 90px;
+    background: #131417;
+    color: #eeeeee;
     border-radius: 50%;
-    box-shadow: 0px 5px 60px black;;
+    box-shadow: 0px 5px 60px #eeeeee;
+    transition: background 10000s;
 }
 
-#inner-welcome:hover {
-    background: orange;
+#welcome-header:hover {
+    transition: ease-in-out;
+    transition-duration: 1s;
+    background: rgb(255, 88, 22);
+}
+
+#invisible {
+    visibility: hidden;
+    height: 825px;
+    width: 100%;
+    margin-top: 150px;
+    padding-top: 100px;
+    background: rgb(31, 39, 43);
 }
 
 #welcome-section h1 {
-    font-size: 5em;
+    font-size: 4.5rem;
+    width: 180px;
+    margin: 0 auto;
+}
+
+#welcome-section p {
+    font-size: 2.7rem;
+    margin-top: 20px;
 }
 
 #project-header {
-    position: relative;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, 25%);
-    width: 100px;
+    text-align: center;
+    padding-top: 5px;
+    width: 100%;
     height: 100px;
-    z-index: 0;
+    font-size: 3rem;
+    background-color: oldlace;
 }
 
 #projects {
