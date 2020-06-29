@@ -9,22 +9,62 @@
     <script defer src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
 <body>
-    
+    <!-- add audio file saying hello -->
     <header>
         <nav id="navbar">
-            <a href="#welcome-section" class="nav-link">About</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact-section" class="nav-link">Contact Me</a>
+            <a href="#welcome-section" class="nav-link"><img src="images/about.svg" alt="">About</a>
+            <a href="#projects" class="nav-link"><img src="images/projects.png" alt="">Projects</a>
+            <a href="#contact-section" class="nav-link"><img src="images/contact2.png" alt="">Contact</a>
         </nav>
     </header>
     <section id="welcome-section">
-        <h1>My name is Sky</h1>
+        <div id="inner-welcome">
+            <h1>Welcome</h1>
+        </div>
+        <div id="project-header">
+            <h1>
+                Projects
+            </h1>
+        </div>
     </section>
     <section id="projects">
-        <div class="project-tile">
-            <a href="https://codepen.io/Dyneskye/pen/eYJgQER" alt="Tribute page of Nikola Tesla">
-                <img src="" alt="">
-            </a>
+        <div class="tilebox">
+             <div id="tribute" class="project-tile">
+                 <a href="https://codepen.io/Dyneskye/pen/eYJgQER" alt="Portfolio tribute page of Nikola Tesla">
+                     <img src="images/tribute.png" alt="">
+                     <h3>Tribute Page</h3>
+                 </a>
+                 <p>
+                     A Tribute Page to Nikola Tesla
+                 </p>
+             </div>
+             <div id="survey" class="project-tile">
+                 <a href="https://codepen.io/Dyneskye/pen/vYLmxMN" alt="Portfolio, of a survey form">
+                     <img src="images/survey.png" alt="">
+                     <h3>Survey</h3>
+                 </a>
+                 <p>
+                     Survey page, about your dreams!
+                 </p>
+             </div>
+        </div>
+        <div class="tilebox">
+             <div id="product" class="project-tile">
+                 <a href="https://codepen.io/Dyneskye/pen/VwezdRe" alt="Portfolio product sales page">
+                     <img src="images/product.png" alt="">
+                     <h3>Product</h3>
+                 </a>
+                 <p>
+                     A Product Landing Page
+                 </p>
+             </div>
+             <div id="doc" class="project-tile">
+                 <a href="https://codepen.io/Dyneskye/pen/WNrEVLr" alt="Portfolio Documentation page">
+                     <img src="images/doc.png" alt="">
+                     <h3>Documentation</h3>
+                 </a>
+                 <p>Javascript Documentation</p>
+             </div>
         </div>
     </section>
     <section id="contact-section">
