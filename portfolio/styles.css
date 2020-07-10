@@ -80,11 +80,10 @@ a {
 #welcome-header:hover {
     transition: ease-in-out;
     transition-duration: 1s;
-    background: rgb(255, 88, 22);
+    background: #f5a361;
 }
 
 #invisible {
-    opacity: 0%;
     height: 825px;
     width: 100%;
     margin-top: 150px;
@@ -98,12 +97,37 @@ a {
     margin: 0 auto;
 }
 
-#invisible h1 {
-}
-
 #welcome-section p {
     font-size: 2.7rem;
     margin-top: 20px;
+
+}
+
+#invisible h1 {
+}
+
+#bio {
+    display: flex;
+    align-items: flex-start;
+    margin: 40px auto 0 auto;
+    width: 800px;
+    border: 1px solid white;
+    text-align: left;
+}
+
+#bio img {
+    height: auto;
+}
+
+#bio-desc {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#bio-desc p {
+    margin: 12px 0 0 5px;
+    width: 100%;
+    border: 1px solid white;
 }
 
 #project-header {
@@ -162,10 +186,10 @@ a {
 
 #profile-link {
     position: relative;
-    top: 50%;
+    top: 45%;
     font-size: 2.8rem;
     margin: 0 20px;
-    color: #f89a4d;
+    color: #f5a361;
 }
 
 #profile-link span {
