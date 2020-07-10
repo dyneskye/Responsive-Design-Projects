@@ -62,7 +62,7 @@ a {
     text-align: center;
     height: 100vh;
     padding-top: 50px;
-    background: #131417;
+    background: linear-gradient(#131417, rgb(31, 39, 43), rgb(31, 39, 43), rgb(31, 39, 43));
 }
 
 #welcome-header {
@@ -84,18 +84,21 @@ a {
 }
 
 #invisible {
-    visibility: hidden;
+    opacity: 0%;
     height: 825px;
     width: 100%;
     margin-top: 150px;
-    padding-top: 100px;
+    padding-top: 175px;
     background: rgb(31, 39, 43);
+    color: rgb(167, 179, 104);
 }
 
 #welcome-section h1 {
     font-size: 4.5rem;
-    width: 180px;
     margin: 0 auto;
+}
+
+#invisible h1 {
 }
 
 #welcome-section p {
@@ -153,5 +156,26 @@ a {
 #contact-section {
     height: 400px;
     width: 100%;
-    background-color: pink;
+    text-align: center;
+    background-color: #666666;
 }
+
+#profile-link {
+    position: relative;
+    top: 50%;
+    font-size: 2.8rem;
+    margin: 0 20px;
+    color: #f89a4d;
+}
+
+#profile-link span {
+    position: relative;
+    bottom: 26px;
+    left: 2px;
+}
+
+#profile-link img {
+    width: 70px;
+}
+
+/* profile-link background #E7CC89 */
