@@ -85,26 +85,34 @@ a {
 }
 
 #welcome-header {
+    margin: 0 auto;
+    border: 1px solid white;
+    width: 200px;
+}
+
+#bulb {
     height: 200px;
     width: 100px;
     margin: 0px auto;
     padding-top: 90px;
-    background: transparent url('images/daylightCycle/bulbBlackEmpty.png') no-repeat center;
+    background: transparent url('images/daylightCycle/bulbBlackMoon.png') no-repeat center;
     background-size: 100%;
     transition: background 10000s;
+    border: 1px solid white;
 }
 
 #welcome-header p, #welcome-header h1 {
-    color: rgb(79, 165, 214);
+    color: rgb(255, 255, 255);
+    
 }
 
-#welcome-header:hover {
+/* #welcome-header:hover {
     transition: ease-in-out;
     transition-duration: 1s;
     background: transparent url('images/daylightCycle/bulbBlackMoon.png') no-repeat center;
     background-size: 100%;
-/*  background: #f5a361; */
-}
+    background: #f5a361;
+} */
 
 #invisible {
     opacity: 0%;
@@ -258,7 +266,7 @@ a {
   .blueSky {
     opacity: 0%;
     background: url(images/daylightCycle/bluesky.jpg) repeat top center;
-    z-index:1; 
+    z-index:3; 
     transition: ease-in-out;
   }
 

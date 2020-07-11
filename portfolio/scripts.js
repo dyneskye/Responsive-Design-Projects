@@ -1,33 +1,58 @@
-$.fn.sayHi = function() {
-    this.html('Hi');
-    return this;
-  }
 
-$.fn.visibilityToggle = function() {
+
+$.fn.opacityToggle = function() {
         return this.css('opacity', (i, percent) => {
         return (percent == 1) ? 0 : 1;
     })
 };
 
+
+async function toggleStars() {
+    $('.stars').opacityToggle();
+    var set = setTimeout(() => {
+        if ($('.stars').css('opacity') == 1) {
+            console.log('showing');
+            $('.twinkling').show();
+        }
+    }, 2000)
+}
+
+async function toggleBlueSky() {
+    $('.twinkling').hide();
+    $('.blueSky').opacityToggle();
+}
+
 async function toggleSky() {
+    $('#invisible').css('transition', "opacity 2000ms");
+    $('#invisible').css('transition', 1);
+    let blueSkyOpac = $('.blueSky').css('opacity');
+    let starsOpac = $('.stars').css('opacity');
+    /* set inMotion to 1? */
     $('.blueSky, .stars, .twinkling').css('transition', 'opacity 2000ms');
-    $('.twinkling').css('visibility', 'hidden');
-    await $('.stars, .twinkling').visibilityToggle();
-    await $('.blueSky').visibilityToggle();
-    
-    /* if ($('.blueSky').css('opacity') == 1) { 
-      $('.stars, .twinkling').css('opacity', 1);
-      $('.blueSky').css('opacity', 0);
+
+    if (blueSkyOpac == starsOpac) {
+        toggleStars();
     } else {
-      $('.stars, .twinkling').css('opacity', 0);
-      $('.blueSky').css('opacity', 1);
-    } */
+        await toggleBlueSky();
+        await toggleStars();
+    }
+
+}
+
+async function asyncToggle() {
+    await toggleSky();
 }
 
 $('#welcome-header').on('mouseover', () => {
-    document.getElementById('invisible').style.transition="opacity 2000ms";
-    document.getElementById('invisible').style.opacity="100%";
     toggleSky();
+    $('#welcome-header').off('mouseover');
+    setTimeout(() => {
+          $('#welcome-header').on('mouseover', () => {
+            toggleSky();
+          })
+    }, 500);
+
+
 /*  $('#welcome-header').css('transition', 'ease-in-out');
     $('#welcome-header').css('transition-duration', '1s');
     $('#welcome-header').css('background', '#f5a361'); */
