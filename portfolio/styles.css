@@ -9,10 +9,27 @@ html {
 }
 
 body {
-    background-color: #fdf5e8;
+    background: url(images/daylightCycle/bluesky.jpg) repeat top center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 100%;
     height: 100%;
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
 }
 
 a {
@@ -32,7 +49,7 @@ a {
     background-color: #fdf5e8;
     border: 1px solid black;
     border-radius: 5px;
-    z-index: 1;
+    z-index: 99;
 }
 
 #navbar a {
@@ -59,36 +76,44 @@ a {
 }
 
 #welcome-section {
+    position: relative;
     text-align: center;
     height: 100vh;
     padding-top: 50px;
-    background: linear-gradient(#131417, rgb(31, 39, 43), rgb(31, 39, 43), rgb(31, 39, 43));
+    /* background: linear-gradient(#1f2022, rgb(31, 39, 43), rgb(31, 39, 43), rgb(31, 39, 43)); */
+    z-index: 5;
 }
 
 #welcome-header {
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 100px;
     margin: 0px auto;
     padding-top: 90px;
-    background: #131417;
-    color: #eeeeee;
-    border-radius: 50%;
-    box-shadow: 0px 5px 60px #eeeeee;
+    background: transparent url('images/daylightCycle/bulbBlackEmpty.png') no-repeat center;
+    background-size: 100%;
     transition: background 10000s;
+}
+
+#welcome-header p, #welcome-header h1 {
+    color: rgb(79, 165, 214);
 }
 
 #welcome-header:hover {
     transition: ease-in-out;
     transition-duration: 1s;
-    background: #f5a361;
+    background: transparent url('images/daylightCycle/bulbBlackMoon.png') no-repeat center;
+    background-size: 100%;
+/*  background: #f5a361; */
 }
 
 #invisible {
+    opacity: 0%;
     height: 825px;
     width: 100%;
     margin-top: 150px;
     padding-top: 175px;
-    background: rgb(31, 39, 43);
+    /* background: rgb(31, 39, 43); */ 
+    background: transparent;
     color: rgb(167, 179, 104);
 }
 
@@ -146,6 +171,7 @@ a {
     justify-content: center;
     align-items: center;
     padding: 20px 0;
+    background-color: #fdf5e8;
 }
 
 .tilebox {
@@ -201,5 +227,39 @@ a {
 #profile-link img {
     width: 70px;
 }
+
+.stars, .twinkling, .blueSky {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+  }
+
+.stars {
+    background: #000 url(images/daylightCycle/stars.png) repeat top center;
+    z-index:1;
+  }
+  
+  .twinkling{
+    background:transparent url(images/daylightCycle/twinkling.png) repeat top center;
+    z-index: 2;
+  
+    -moz-animation:move-twink-back 200s linear infinite;
+    -ms-animation:move-twink-back 200s linear infinite;
+    -o-animation:move-twink-back 200s linear infinite;
+    -webkit-animation:move-twink-back 200s linear infinite;
+    animation:move-twink-back 200s linear infinite;
+  }
+
+  .blueSky {
+    opacity: 0%;
+    background: url(images/daylightCycle/bluesky.jpg) repeat top center;
+    z-index:1; 
+    transition: ease-in-out;
+  }
 
 /* profile-link background #E7CC89 */

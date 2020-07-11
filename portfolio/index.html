@@ -5,25 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-
+    
     <script defer src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 </head>
 <body>
     <!-- add audio file saying hello -->
     <header>
         <nav id="navbar">
-            <a href="#welcome-section" class="nav-link"><img src="images/icons/about.svg" alt="">About</a>
+            <a id="aboutButton" href="#welcome-section" class="nav-link"><img src="images/icons/about.svg" alt="">About</a>
             <a href="#projects" class="nav-link"><img src="images/icons/projects.png" alt="">Projects</a>
             <a href="#contact-section" class="nav-link"><img src="images/icons/contact2.png" alt="">Contact</a>
         </nav>
     </header>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="sun"></div>
+    <div class="blueSky"></div>
+    <div class="clouds"></div>
     <section id="welcome-section">
         <header id="welcome-header">
-            <h1>Welcome</h1>
-            <p>Psst, hover over me</p>
+        <!--<h1>Welcome</h1>
+            <p>Psst, hover over me</p> -->
         </header>
         <div id="invisible">
-            <h1>Hello, my name is sky</h1>
+            <h1>I'll develop it</h1>
             <div id="bio">
                 <img src="images/profile-cut.png" alt="">
                 <div id="bio-desc">
@@ -86,8 +92,10 @@
         <a href="#FCC"></a>
     </section>
 
-
-    <script src="scripts.js"></script>
-
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+    <script defer src="scripts.js"></script>
 </body>
 </html>
