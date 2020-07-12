@@ -43,25 +43,25 @@ async function asyncToggle() {
     await toggleSky();
 }
 
-$('#welcome-header').on('mouseover', () => {
+$('#bulb').on('mouseover', () => {
     toggleSky();
-    $('#welcome-header').off('mouseover');
+    $('#bulb').off('mouseover');
     setTimeout(() => {
-          $('#welcome-header').on('mouseover', () => {
+          $('#bulb').on('mouseover', () => {
             toggleSky();
           })
     }, 500);
 
 
-/*  $('#welcome-header').css('transition', 'ease-in-out');
-    $('#welcome-header').css('transition-duration', '1s');
-    $('#welcome-header').css('background', '#f5a361'); */
+/*  $('#bulb').css('transition', 'ease-in-out');
+    $('#bulb').css('transition-duration', '1s');
+    $('#bulb').css('background', '#f5a361'); */
 })
 
 $('#aboutButton').on('click', (e) => {
     document.getElementById('invisible').style.transition="opacity 2000ms";
     document.getElementById('invisible').style.opacity="100%";
-/*  $('#welcome-header').css('transition', 'ease-in-out');
-    $('#welcome-header').css('transition-duration', '1s');
-    $('#welcome-header').css('background', '#f5a361'); */
+/*  $('#bulb').css('transition', 'ease-in-out');
+    $('#bulb').css('transition-duration', '1s');
+    $('#bulb').css('background', '#f5a361'); */
 })
