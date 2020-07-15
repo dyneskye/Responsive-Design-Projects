@@ -28,11 +28,8 @@ async function toggleBlueSky() {
 }
 
 async function toggleSky() {
-    $('#invisible').css('transition', "opacity 2000ms");
-    $('#invisible').css('transition', 1);
     let blueSkyOpac = $('.blueSky').css('opacity');
     let starsOpac = $('.stars').css('opacity');
-    /* set inMotion to 1? */
     $('.blueSky, .stars, .twinkling').css('transition', 'opacity 2000ms');
 
     if (blueSkyOpac == starsOpac) {
@@ -56,17 +53,9 @@ $('#bulb').on('mouseover', () => {
             toggleSky();
           })
     }, 500);
-
-
-/*  $('#bulb').css('transition', 'ease-in-out');
-    $('#bulb').css('transition-duration', '1s');
-    $('#bulb').css('background', '#f5a361'); */
 })
 
 $('#aboutButton').on('click', (e) => {
     document.getElementById('invisible').style.transition="opacity 2000ms";
-    document.getElementById('invisible').style.opacity="100%";
-/*  $('#bulb').css('transition', 'ease-in-out');
-    $('#bulb').css('transition-duration', '1s');
-    $('#bulb').css('background', '#f5a361'); */
+    $('#invisible').opacityToggle();
 })

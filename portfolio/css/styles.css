@@ -1,8 +1,13 @@
 
 
 @font-face {
-    font-family: "Roboto Test";
-    src: url("css/fonts/Roboto-Regular.ttf");
+    font-family: "Roboto Regular";
+    src: url("fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Thin";
+    src: url("fonts/Roboto-Thin.ttf");
 }
 
 @keyframes move-twink-back {
@@ -51,15 +56,14 @@ html {
 }
 
 body {
-    background: url(images/daylightCycle/bluesky.jpg) repeat top center;
-    font-family: "Roboto Test";
+    background: url("images/daylightCycle/bluesky.jpg") repeat top center;
+    font-family: "Roboto Regular", Times, 'Times New Roman', serif;
     width: 100%;
     height: 100%;
 }
 
 a {
     text-decoration: none;
-    color: white;
 }
 
 #navbar {
@@ -82,7 +86,7 @@ a {
     width: 150px;
     padding: 5px 10px;
     border-right: 1px solid black;
-    color: red;
+    color: #0a0a0a;
 }
 
 #navbar a:last-of-type {
@@ -103,18 +107,17 @@ a {
 
 #welcome-section {
     position: relative;
+    margin: 0 20px;
     text-align: center;
     height: 100vh;
     padding-top: 50px;
-    /* background: linear-gradient(#1f2022, rgb(31, 39, 43), rgb(31, 39, 43), rgb(31, 39, 43)); */
     z-index: 5;
-    border: 1px solid black;
 }
 
 #welcome-header {
     margin: 0 auto;
     width: 200px;
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: white;
 }
 
@@ -129,57 +132,58 @@ a {
     z-index: 15;
 }
 
-/* #welcome-header:hover {
-    transition: ease-in-out;
-    transition-duration: 1s;
-    background: transparent url('images/daylightCycle/bulbBlackMoon.png') no-repeat center;
-    background-size: 100%;
-    background: #f5a361;
-} */
-
 #invisible {
     opacity: 0%;
-    height: 825px;
-    width: 100%;
+    height: auto;
     margin-top: 150px;
     padding-top: 175px;
-    /* background: rgb(31, 39, 43); */ 
     background: transparent;
-    color: white;
 }
 
 #invisible h2 {
     font-size: 4rem;
-    margin: 0 auto;
+    color: white;
 }
 
-#invisible h1 {
-}
 
 #bio {
     display: flex;
     max-width: 900px;
-    align-items: flex-start;
+    align-items: center;
     margin: 40px auto 0 auto;
     border: 1px solid white;
+    border-radius: 10px;
+    background-color: #C0B9DD;
     text-align: left;
 }
 
 #bio img {
     height: auto;
+    border-radius: 10px 0 0 10px;
 }
 
 #bio-desc {
     display: flex;
     flex-basis: 700px;
     flex-wrap: wrap;
+    color: #0a0a0a;
 }
 
-#bio-desc p {
+#bio-desc p, span {
     font-size: 2.2rem;
-    margin: 12px 0 0 5px;
+    margin: 20px 10px 0px 10px;
     width: 100%;
-    border: 1px solid white;
+}
+
+/* add span later */
+#bio-desc span {
+    display: none;
+    margin-top: 5px;
+}
+
+#bio-desc a {
+    color: #04023B;
+    text-decoration: underline;
 }
 
 #project-header {
@@ -190,16 +194,12 @@ a {
     height: 100px;
     font-size: 3rem;
     background-color:#CAD49D;
-    /* rgb(167, 179, 104) text-orange 
-       #cccccc cloud gray
-    
-    */
-
 }
 
 #projects {
     display: flex;
     height: 100%;
+    min-height: 400px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
@@ -228,6 +228,7 @@ a {
 .project-tile img {
     height: 200px;
     width: 100%;
+    border-radius: 8px 8px 0 0;
     border-color:transparent;
 }
 
@@ -242,12 +243,23 @@ a {
     color: #0A0A0A;
 }
 
+
+#contact-header {
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+    height: 100px;
+    font-size: 2.4rem;
+    background-color:#CAD49D;
+}
+
 #contact-section {
     height: 400px;
     width: 100%;
     text-align: center;
     background-color: #666666;
 }
+
 
 #profile-link {
     position: relative;
@@ -311,4 +323,26 @@ a {
     -webkit-animation:move-clouds-back 200s linear infinite;
      animation:move-clouds-back 200s linear infinite;
   }
+
+  @media (max-width: 888px) {
+    #invisible {
+        margin-top: 0px;
+        padding-top: 125px;
+   }
+
+    #invisible h2 {
+        font-size: 4rem;
+        margin: 0 auto;
+    }
+    #bio {
+        flex-wrap: wrap;
+        max-width: 500px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    #bio img {
+        border-radius: 10px;
+    }
+
 /* profile-link background #E7CC89 */
