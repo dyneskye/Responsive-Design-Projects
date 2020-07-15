@@ -14,29 +14,29 @@ $(document).ready(setTimeout(() => {
 
 async function toggleStars() {
     $('.stars').opacityToggle();
-    var set = setTimeout(() => {
+    setTimeout(() => {
         if ($('.stars').css('opacity') == 1) {
-            console.log('showing');
-            $('.twinkling').show();
+            $('.twinkle').show();
+            $('.twinkle').css('opacity', 1);
         }
-    }, 2000)
+    }, 2500)
 }
 
 async function toggleBlueSky() {
-    $('.twinkling').hide();
+    $('.twinkle').css('opacity', 0);
+    $('.twinkle').hide();
     $('.blueSky').opacityToggle();
 }
 
 async function toggleSky() {
     let blueSkyOpac = $('.blueSky').css('opacity');
     let starsOpac = $('.stars').css('opacity');
-    $('.blueSky, .stars, .twinkling').css('transition', 'opacity 2000ms');
-
+    $('.blueSky, .stars, .twinkle').css('transition', 'opacity 2000ms');
     if (blueSkyOpac == starsOpac) {
         toggleStars();
     } else {
         await toggleBlueSky();
-        await toggleStars();
+        toggleStars();
     }
 
 }
@@ -45,11 +45,11 @@ async function asyncToggle() {
     await toggleSky();
 }
 
-$('#bulb').on('mouseover', () => {
+$('#bulb').on('mouseenter', () => {
     toggleSky();
-    $('#bulb').off('mouseover');
+    $('#bulb').off('mouseenter');
     setTimeout(() => {
-          $('#bulb').on('mouseover', () => {
+          $('#bulb').on('mouseenter', () => {
             toggleSky();
           })
     }, 500);
