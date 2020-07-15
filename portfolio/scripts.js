@@ -6,6 +6,11 @@ $.fn.opacityToggle = function() {
     })
 };
 
+$(document).ready(setTimeout(() => {
+    document.getElementById('invisible').style.transition="opacity 2000ms";
+    document.getElementById('invisible').style.opacity="100%";
+}, 1500))
+
 
 async function toggleStars() {
     $('.stars').opacityToggle();
